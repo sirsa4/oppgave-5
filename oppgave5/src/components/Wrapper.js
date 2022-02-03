@@ -2,7 +2,7 @@
 
 const Wrapper = ({children})=>{
     return(
-        <section>
+        <section className='flex'>
             {/* children prop run */}
          {children}
         </section>
