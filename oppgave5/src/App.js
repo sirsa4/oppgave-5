@@ -5,6 +5,7 @@ import './App.css';
 import MyComponent from './components/MyComponent.js'
 import Title from './components/Title';
 import Wrapper from './components/Wrapper';
+import Food from './components/Food';
 
 function App() {
   const title = 'It Works';
@@ -42,11 +43,18 @@ function App() {
           {food.map((foo, index)=> <li key={index}>{foo}</li>
             )}
           </ul> */}
-          <ul>
+        {/*   <ul>
           {food.map((foo, index)=>( 
               <li key={index}>{foo}</li>
             ))}
-          </ul>
+          </ul> */}
+        </>
+
+        {/* oppgave 7 */}
+        <>
+          <Food food={food.map((foo, index)=>( 
+              <li key={index}>{foo}</li>
+            ))} />
         </>
     </div>
   );

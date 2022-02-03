@@ -1,28 +1,29 @@
 # oppgave 5
  Oppgave i UIN
 
-## oppgave 6: Lists
-* Create an array const food = 'Pizza', 'Hamburger', 'Coke';
-* Render this list inside App.js. Use ul>li>li>ul> and food.map
-* Remember to add a key to li>.
-* All of this should be inside the return.
+## oppgave 7: Lists Component
+* Create a Food component in the components folder.
+* Replace the list create above with this component. The browser should still render the list.
+* Remember to add "food"-prop to the Food> component and send the food array as prop.
+
+<hr>
+<hr>
+
+![opgave7 component](src/img/opg7vs1.PNG)
+* 1: Component file named 'Food.js' is created
+* 2: Component function with same name as file created
+* 3: function parameter takes in prop named 'food'
+* 4: in return prop from parameter is returned inside empty box.
+* 5: Component function is export as default.
 
 
-* Array variable with 3 items added above return.
+![opgave 7 array map](src/img/opg7vs2.PNG)
+* in App.js, Food component is rendered.
+* Food component has prop name 'food' and it returns map of food variabel array. 
+* Food component retunrs exactly same oppgave 3 list array
 
-![opgave6 array variabel](src/img/opg6vs1.PNG)
 
-
-* Inside return ul-tag is created
-*Inside ul, food array is mapped.
-* new map array function has 2 parameters, food and index
-* foo is accessing each item in food array
-* index is position which each item in array is located, Pizza position 0, Hamburger position 1, Coke position 2. index is used as key for each li-tag being rendered
-* Map returns li tag with array values as textContent and key prop is added to each array index parameter. 
-
-![opgave 6 array map](src/img/opg6vs2.PNG)
-
-* Here is ul with li children is rendered in DOM.
-![opgave 6 ul li rendered in DOM](src/img/opg6vs3.PNG)
+![opgave 7 ul li rendered in DOM](src/img/opg7vs3.PNG)
+* Here is ul with li children is rendered again in DOM, but this from Food component.
 
 
