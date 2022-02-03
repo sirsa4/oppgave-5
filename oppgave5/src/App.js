@@ -19,6 +19,11 @@ function App() {
     console.log('Clicked');
   }
 
+  //oppgave 9 input change function
+  const change = (e)=>{
+    console.log('change '+ e.target.value);
+  }
+
   return (
     <div className="App">
       <h1>Oppgave 5</h1>
@@ -63,10 +68,17 @@ function App() {
               <li key={index}>{foo}</li>
             ))} />
         </>
+
         {/* oppgave 8 */}
         <>
-        <button className="btn" onClick={click}>Button</button>
+        <button className="btn" onClick={click}>Button</button><br/>
         </>
+        
+        {/* oppgave 9 */}
+        <>
+        <input onChange={change}/>
+        </>
+
     </div>
   );
 }

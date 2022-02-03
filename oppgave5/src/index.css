@@ -28,3 +28,6 @@ code {
   color: white;
   padding: 1rem 1rem;
 }
+input {
+  margin-top: 10px;
+}
