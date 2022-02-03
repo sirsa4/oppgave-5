@@ -13,10 +13,11 @@ const MyComponent = ({title})=>{
         {/* oppgave 2 */}
       {/*   <h1>{title}</h1> */}
         {/* oppgave 3 */}
-
-        {/* Title component is run in MyComponent with props title */}
+        {/* Title component is run in 
+        MyComponent with props title */}
+        
         <span>oppgave 3</span>
-        <Title title={title}/>
+        <Title title={title} />
        </div>
     )
 }

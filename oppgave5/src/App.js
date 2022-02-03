@@ -4,8 +4,10 @@ import './App.css';
 //components imports
 import MyComponent from './components/MyComponent.js'
 import Title from './components/Title';
+import Wrapper from './components/Wrapper';
 
 function App() {
+  const title = 'It Works'
   return (
     <div className="App">
       <h1>Oppgave 5</h1>
@@ -14,11 +16,18 @@ function App() {
       <MyComponent/>
       </div> */}
       <div>
-      <MyComponent title='It Works'/>
+     {/*  <MyComponent title={title}/> */}
       </div>
+      {/* oppgave 3 */}
       <div>
-      <Title />
+    {/*   <Title job={job} /> */}
       </div>
+      {/* oppgave 4 */}
+      <>
+      <Wrapper>
+        <Title title='Test'/>
+      </Wrapper>
+      </>
     </div>
   );
 }

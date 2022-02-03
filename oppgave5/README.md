@@ -1,25 +1,26 @@
 # oppgave 5
  Oppgave i UIN
 
-## oppgave 3: Passing props to a child component
-* Create a Title component in the components folder. It should take one prop named title.
-Replace the h1> in MyComponent with the Title> component. It should still render "It Works" in the browser. Remember to pass the prop from MyComponent to Title.
+## oppgave 4: Children prop
+* Create a Wrapper component in the components folder
+Return section> /section> from this component
+Use this in App.js
+Make it possible to render children between the Wrapper> /Wrapper> component. Use (props.children) in the Wrapper> component.
+* Ex. Wrapper> /Title title="Test" /> /Wrapper> should render the content of  Title>
 
-* Component file and function component with in name 'Title' created.
-* Component has props named 'title' in parameter
-* h1-tag retuned has value from parameter.
-* component is exported as default
+* 1: Wrapper component created
+* 2: Wrapper component function created
+* 3: children desctructed in function parameter {children}
+* 4: section html element wrapping children elements
+* 5: children property is called inside jsx with {children}
+* 6: Component is exported
+![opgave3 compo](src/img/opg4vs1.PNG)
 
-![opgave3 compo](src/img/opg3vs1.PNG)
 
-* Title.js component is imported inside myComponent.js
-* Title component is run inside myComponent return()
-* Title is given props named 'title' which the parameter {title}
+* Wrapper component is run in App.js and Title component is run inside the Wrapper component.
+* Title component has prop named 'title' which returns 'test' string.
+![opgave 3 child](src/img/opg4vs3.PNG)
 
-![opgave 3 child](src/img/opg3vs2.PNG)
+* Title component has h1-tag which takes in the prop from the component instance rendered in the Wrapper component in App.js
 
-* in render function, App. Title component is imported here too
-* Title is render here. But no props added.
-* props are coming from myComponent component where {title} = 'It Works'.
-
-![opgave 3 child](src/img/opg3vs3.PNG)
+![opgave 3 child](src/img/opg4vs2.PNG)

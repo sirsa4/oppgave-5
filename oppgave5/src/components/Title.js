@@ -3,7 +3,9 @@
 const Title = ({title})=>{
     return(
         /* return title in h1-tag */
+    <div>
     <h1>{title}</h1>
+    </div>
     )
 }
 
