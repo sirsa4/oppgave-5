@@ -1,29 +1,26 @@
 # oppgave 5
  Oppgave i UIN
 
-## oppgave 7: Lists Component
-* Create a Food component in the components folder.
-* Replace the list create above with this component. The browser should still render the list.
-* Remember to add "food"-prop to the Food> component and send the food array as prop.
+## oppgave 8: Event
+* Add a button> to App.js
+* Listen to click-event on this button.
+* console.log("Clicked") when clicking the button.
+
 
 <hr>
 <hr>
 
-![opgave7 component](src/img/opg7vs1.PNG)
-* 1: Component file named 'Food.js' is created
-* 2: Component function with same name as file created
-* 3: function parameter takes in prop named 'food'
-* 4: in return prop from parameter is returned inside empty box.
-* 5: Component function is export as default.
+![opgave7 component](src/img/opg8vs1.PNG)
+* Button element is created inside App.js
+* Button has className 'btn' used in index.css.
+* Button has click event which runs function named 'click' 
 
 
-![opgave 7 array map](src/img/opg7vs2.PNG)
-* in App.js, Food component is rendered.
-* Food component has prop name 'food' and it returns map of food variabel array. 
-* Food component retunrs exactly same oppgave 3 list array
+![opgave 7 array map](src/img/opg8vs2.PNG)
+* click event function is written above the return in App()
+* when button is clicked, the console log runs showing 'clicked' in log.
 
 
-![opgave 7 ul li rendered in DOM](src/img/opg7vs3.PNG)
-* Here is ul with li children is rendered again in DOM, but this from Food component.
+
 
 

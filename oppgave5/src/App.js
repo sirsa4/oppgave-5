@@ -10,8 +10,15 @@ import Food from './components/Food';
 function App() {
   const title = 'It Works';
 
+  //variabel which for li-tag
   const food = ['Pizza', 'Hamburger', 'Coke'];
  
+  //oppgave 8, click event
+  //click button function which only has console.log
+  const click = ()=>{
+    console.log('Clicked');
+  }
+
   return (
     <div className="App">
       <h1>Oppgave 5</h1>
@@ -55,6 +62,10 @@ function App() {
           <Food food={food.map((foo, index)=>( 
               <li key={index}>{foo}</li>
             ))} />
+        </>
+        {/* oppgave 8 */}
+        <>
+        <button className="btn" onClick={click}>Button</button>
         </>
     </div>
   );
