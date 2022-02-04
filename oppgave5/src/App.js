@@ -7,7 +7,30 @@ import Title from './components/Title';
 import Wrapper from './components/Wrapper';
 import Food from './components/Food';
 
+  //import useState: oppgave 10 >
+//resource: https://www.w3schools.com/REACT/react_usestate.asp
+//https://fullstækk.no/courses/intro-react/12-forms/
+import {useState} from 'react';
+
+
 function App() {
+
+//oppgave 10
+//use state on input
+//state is value with is set to empty string here at start
+//setState is function to update the state
+const [state, setState] = useState('');
+
+//update input value in function
+const inputValue = (e)=>{
+  const value = e.target.value;
+  
+  //state is updated with function
+  setState(value);
+
+console.log(value);
+}
+
   const title = 'It Works';
 
   //variabel which for li-tag
@@ -20,9 +43,9 @@ function App() {
   }
 
   //oppgave 9 input change function
-  const change = (e)=>{
-    console.log('change '+ e.target.value);
-  }
+ /*  const change = (e)=>{
+    console.log('change');
+  } */
 
   return (
     <div className="App">
@@ -70,14 +93,20 @@ function App() {
         </>
 
         {/* oppgave 8 */}
-        <>
+      {/*   <>
         <button className="btn" onClick={click}>Button</button><br/>
-        </>
+        </> */}
         
-        {/* oppgave 9 */}
+        {/* oppgave 9/10 
+        * Input value is set as state so it can be updated
+        * onChange is used to update the state by state update function, setvalue being what is typed in input field.
+
+        */}
         <>
-        <input onChange={change}/>
+        <input /* onChange={change} */  value={state} onChange={inputValue}/>
+        <p>{state}</p>
         </>
+
 
     </div>
   );
