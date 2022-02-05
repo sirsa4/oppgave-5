@@ -24,11 +24,11 @@ const [state, setState] = useState('');
 //update input value in function
 const inputValue = (e)=>{
   const value = e.target.value;
-  
+
   //state is updated with function
   setState(value);
 
-console.log(value);
+/* console.log(value); */
 }
 
   const title = 'It Works';
@@ -36,10 +36,20 @@ console.log(value);
   //variabel which for li-tag
   const food = ['Pizza', 'Hamburger', 'Coke'];
  
-  //oppgave 8, click event
+  //oppgave 8/11, click event
   //click button function which only has console.log
   const click = ()=>{
+    //oppgave
     console.log('Clicked');
+
+    //oppgave 11
+    //run alert if state, input field is not empty
+    if(state !== ''){
+
+      alert(state)
+    }
+   
+    
   }
 
   //oppgave 9 input change function
@@ -92,10 +102,12 @@ console.log(value);
             ))} />
         </>
 
-        {/* oppgave 8 */}
-      {/*   <>
+        {/* oppgave 8/11
+          * button has onClick event which runs function called 'called'
+        */}
+        <>
         <button className="btn" onClick={click}>Button</button><br/>
-        </> */}
+        </>
         
         {/* oppgave 9/10 
         * Input value is set as state so it can be updated
@@ -104,7 +116,7 @@ console.log(value);
         */}
         <>
         <input /* onChange={change} */  value={state} onChange={inputValue}/>
-        <p>{state}</p>
+        {/* <p>{state}</p> */}
         </>
 
 
