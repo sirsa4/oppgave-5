@@ -6,6 +6,7 @@ import MyComponent from './components/MyComponent.js'
 import Title from './components/Title';
 import Wrapper from './components/Wrapper';
 import Food from './components/Food';
+import Alert from './components/Alert';
 
   //import useState: oppgave 10 >
 //resource: https://www.w3schools.com/REACT/react_usestate.asp
@@ -19,17 +20,21 @@ function App() {
 //use state on input
 //state is value with is set to empty string here at start
 //setState is function to update the state
-const [state, setState] = useState('');
+/* const [state, setState] = useState(''); */
+
+/* oppgave 13 */
+/* This is for value inside the p-tag */
+const [inputValue, setInputValue] = useState('');
 
 //update input value in function
-const inputValue = (e)=>{
+/* const inputValue = (e)=>{
   const value = e.target.value;
 
   //state is updated with function
   setState(value);
 
-/* console.log(value); */
-}
+console.log(value);
+} */
 
   const title = 'It Works';
 
@@ -44,10 +49,10 @@ const inputValue = (e)=>{
 
     //oppgave 11
     //run alert if state, input field is not empty
-    if(state !== ''){
+    /* if(state !== ''){
 
       alert(state)
-    }
+    } */
    
     
   }
@@ -106,7 +111,7 @@ const inputValue = (e)=>{
           * button has onClick event which runs function called 'called'
         */}
         <>
-        <button className="btn" onClick={click}>Button</button><br/>
+       {/*  <button className="btn" onClick={click}>Button</button><br/> */}
         </>
         
         {/* oppgave 9/10 
@@ -115,11 +120,13 @@ const inputValue = (e)=>{
 
         */}
         <>
-        <input /* onChange={change} */  value={state} onChange={inputValue}/>
+       {/*  <input onChange={change}  value={state} onChange={inputValue}/> */}
         {/* <p>{state}</p> */}
         </>
 
-
+        {/* oppgave 12/13 */}
+        <p>Oppgave 13: {inputValue}</p>
+        <Alert pValue={setInputValue}/>
     </div>
   );
 }
