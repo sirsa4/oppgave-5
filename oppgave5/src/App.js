@@ -62,6 +62,11 @@ console.log(value);
     console.log('change');
   } */
 
+  /* oppgave14 flag */
+  //funksjonen is sent as prop
+  const [clicked, isClicked] = useState(false);
+  
+  console.log(clicked);
   return (
     <div className="App">
       <h1>Oppgave 5</h1>
@@ -102,9 +107,9 @@ console.log(value);
 
         {/* oppgave 7 */}
         <>
-          <Food food={food.map((foo, index)=>( 
+          <Food /* food={food.map((foo, index)=>( 
               <li key={index}>{foo}</li>
-            ))} />
+            ))} */ food ={food} />
         </>
 
         {/* oppgave 8/11
@@ -125,8 +130,12 @@ console.log(value);
         </>
 
         {/* oppgave 12/13 */}
-        <p>Oppgave 13: {inputValue}</p>
-        <Alert pValue={setInputValue}/>
+      {/*   <p>Oppgave 13: {inputValue}</p>
+        <Alert pValue={setInputValue}/> */}
+
+        {/* oppgave 14 */}
+        {clicked ? <p>{inputValue}</p> : ''}
+        <Alert pValue={setInputValue} clicked={isClicked} />
     </div>
   );
 }

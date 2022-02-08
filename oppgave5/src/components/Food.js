@@ -3,7 +3,9 @@
 const Food = ({food})=>{
     return(
         <>
-        {food}
+        {food.map((foo, index)=>( 
+              <li key={index}>{foo}</li>
+            ))} 
         </>
     );
 }
